@@ -15,6 +15,9 @@ public abstract class Client {
 		System.out.println("attempting to connect");
 
 		/* TODO: Write this method */
+		/* Check the sample client-server application at https://github.com/cs1653-skhattab/sample-client-server */
+
+		return false;
 
 	}
 

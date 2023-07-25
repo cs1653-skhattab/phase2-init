@@ -156,6 +156,8 @@ public class FileClient extends Client implements HostClientInterface {
 				System.out.printf("Upload failed: %s\n", env.getMessage());
 				return false;
 			}
+			
+			fis = new FileInputStream(sourceFile);
 
 			do {
 				byte[] buf = new byte[4096];
@@ -164,7 +166,6 @@ public class FileClient extends Client implements HostClientInterface {
 					return false;
 				}
 				message = new Envelope("CHUNK");
-				fis = new FileInputStream(sourceFile);
 				int n = fis.read(buf); // can throw an IOException
 				if (n > 0) {
 					System.out.printf(".");

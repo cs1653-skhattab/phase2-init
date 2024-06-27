@@ -127,8 +127,8 @@ public class FileClient extends Client implements HostClientInterface {
 			final SharedResource remoteResource,
 			final String group, final UserToken token) {
 
-		String sourceFile = remoteResource.getID();
-		String destFile = localResource.getID();
+		String destFile = remoteResource.getID();
+		String sourceFile = localResource.getID();
 		FileInputStream fis;
 
 		if (destFile.charAt(0) != '/') {
